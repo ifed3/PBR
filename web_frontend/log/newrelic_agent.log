@@ -1,0 +1,49 @@
+# Logfile created on 2015-08-01 18:34:41 -0500 by logger.rb/41954
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] WARN : No configuration file found. Working directory = /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] WARN : Looked in these locations (based on defaults): /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/config/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/config/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/newrelic.yml, /Users/michaelhassin/.newrelic/newrelic.yml, /Users/michaelhassin/newrelic.yml
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Environment: development
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : No known dispatcher detected.
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Application: development
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Installing Net instrumentation
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Installing Sinatra instrumentation
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Installing deferred Rack instrumentation
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 18:34:41 -0500 mhassin.local (2351)] INFO : Finished instrumentation
+[08/01/15 18:34:52 -0500 mhassin.local (2351)] INFO : Doing deferred dependency-detection before Rack startup
+[08/01/15 18:34:52 -0500 mhassin.local (2351)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/01/15 18:34:52 -0500 mhassin.local (2351)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] WARN : No configuration file found. Working directory = /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] WARN : Looked in these locations (based on defaults): /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/config/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/config/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/newrelic.yml, /Users/michaelhassin/.newrelic/newrelic.yml, /Users/michaelhassin/newrelic.yml
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Environment: development
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : No known dispatcher detected.
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Application: development
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Installing Net instrumentation
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Installing Sinatra instrumentation
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Installing deferred Rack instrumentation
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 18:36:32 -0500 mhassin.local (2435)] INFO : Finished instrumentation
+[08/01/15 18:36:36 -0500 mhassin.local (2435)] INFO : Doing deferred dependency-detection before Rack startup
+[08/01/15 18:36:36 -0500 mhassin.local (2435)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/01/15 18:36:36 -0500 mhassin.local (2435)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Starting the New Relic agent in "development" environment.
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] WARN : No configuration file found. Working directory = /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] WARN : Looked in these locations (based on defaults): /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/config/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/config/newrelic.yml, /Users/michaelhassin/code/_nonTW/open_gov/PBR/web_frontend/newrelic.yml, /Users/michaelhassin/.newrelic/newrelic.yml, /Users/michaelhassin/newrelic.yml
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Environment: development
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : No known dispatcher detected.
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Application: development
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Installing Net instrumentation
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Installing Sinatra instrumentation
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Installing deferred Rack instrumentation
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Installing Rack::Builder middleware instrumentation
+[08/01/15 19:06:00 -0500 mhassin.local (2800)] INFO : Finished instrumentation
+[08/01/15 19:06:11 -0500 mhassin.local (2800)] INFO : Doing deferred dependency-detection before Rack startup
+[08/01/15 19:06:11 -0500 mhassin.local (2800)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/01/15 19:06:11 -0500 mhassin.local (2800)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

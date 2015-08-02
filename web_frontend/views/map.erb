@@ -1,6 +1,5 @@
 <head>
 	<script type="text/javascript" src="/leaflet.js"></script>
-	<script type="text/javascript" src="/polyline.js"></script>
 	<link rel="stylesheet" href="/leaflet.css" />
 	<script type="text/javascript">
 	  window.onload = function () {
@@ -8,7 +7,6 @@
 	  	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 			}).addTo(Window.map);
-			console.log('<%= @waypoints %>');
 			var points = <%= @waypoints %>;
 	  	var pointlist = points.map(function(point) {return new L.LatLng(point[0], point[1])});
 	  	var poly = new L.Polyline(pointlist, {

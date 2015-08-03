@@ -14,8 +14,8 @@ class PbrApp < Sinatra::Base
   	erb :index
   end
 
-  post '/route' do
-  	@waypoints = get_waypoints(params)
+  get '/route' do
+  	@waypoints = get_waypoints(params['origin'], params['destination'])
   	erb :map
   end
 

@@ -1,6 +1,6 @@
 # Hosting locally
 
-Set working directory to that of the frontend folder in the terminal  
+Set working directory to that of the frontend folder
 
 ```
 $ bundle install

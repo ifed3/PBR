@@ -11,25 +11,13 @@ import MapKit
 
 class GISUtils: NSObject {
 
-    class func getPolyline(address1: String, address2: String){
-        let originCoordinate = self.getCoordinate(address1)
-        let destinationCoordinate = self.getCoordinate(address2)
-        let url = NSURL(string: "")
-    }
-    
-    class func getCoordinate(address: String) -> CLLocationCoordinate2D {
-        println("hey")
-        var error: NSError?
-        let url = NSURL(string: "http://pelias.mapzen.com/search?input=" + address.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+    class func getPolyline(address1: String, address2: String) -> MKGeodesicPolyline {
+        let url = NSURL(string: "https://chihack-pbr.herokuapp.com/polyline_for?origin=" + address1.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)! + "&destination=" + address2.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
         let data = NSData(contentsOfURL: url!)
-        let json = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
-        let features = (json.objectForKey("features") as! NSArray) as Array
-        let firstFeature = features.first as! NSDictionary
-        let geometry = firstFeature.objectForKey("geometry") as! NSDictionary
-        let coordinates = (geometry.objectForKey("coordinates") as! NSArray) as! [Double]
-        let location = CLLocationCoordinate2D(latitude: coordinates.last!, longitude: coordinates.first!)
-        println(location.latitude)
-        println(location.longitude)
-        return location
+        var error: NSError?
+        let waypoints = (NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSArray) as! [Array<Double>]
+        var locations = waypoints.map { CLLocationCoordinate2D(latitude: $0.first!, longitude: $0.last!) }
+        let geodesic = MKGeodesicPolyline(coordinates: &locations[0], count: locations.count)
+        return geodesic
     }
 }

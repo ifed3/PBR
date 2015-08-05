@@ -44,8 +44,9 @@ class ViewController: UIViewController {
     }
 
     func doRoute(origin: String, destination: String){
-        GISUtils.getCoordinate(origin)
-        GISUtils.getCoordinate(destination)
+        let map = MapViewController()
+        map.polyline = GISUtils.getPolyline(origin, address2: destination)
+        presentViewController(map, animated: true, completion: nil)
     }
 }
 

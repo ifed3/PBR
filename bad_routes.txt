@@ -4,3 +4,4 @@ origin -> destination
 2706 west giddins -> 1800 W Lawrence Ave
 2706 west giddins -> 3361 N Elston Ave
 2706 west giddins -> 5148 N Clark St
+2936 n fairfield ave -> 121 n lasalle st

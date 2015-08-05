@@ -15,21 +15,25 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        var usernameTextField: UITextField?
-        var passwordTextField: UITextField?
-        let alert = UIAlertController(title: "Log in", message: "enter your username and password to continue", preferredStyle: UIAlertControllerStyle.Alert)
+        var originTextField: UITextField?
+        var destinationTextField: UITextField?
+        let alert = UIAlertController(title: "Route me", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            usernameTextField = textField
+            originTextField = textField
+            // TODO: delete
+            originTextField!.text = "navy pier chicago"
         }
         
         alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            passwordTextField = textField
+            destinationTextField = textField
+            // TODO: delete
+            destinationTextField!.text = "merchandise mart chicago"
         }
         
         alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler: { action in
             alert.dismissViewControllerAnimated(true, completion: nil)
-            self.doRoute(usernameTextField!.text, password: passwordTextField!.text)
+            self.doRoute(originTextField!.text, destination: destinationTextField!.text)
         }))
         
         alert.addAction(UIAlertAction(title: "cancel", style: .Cancel, handler: { action in
@@ -40,8 +44,8 @@ class ViewController: UIViewController {
     }
 
     func doRoute(origin: String, destination: String){
-        
+        GISUtils.getCoordinate(origin)
+        GISUtils.getCoordinate(destination)
     }
-
 }
 

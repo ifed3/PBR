@@ -14,6 +14,7 @@
 		AADEBD411B71851400CDE27E /* PBRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEBD401B71851400CDE27E /* PBRTests.swift */; };
 		AADEBD4B1B7186E000CDE27E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADEBD4A1B7186E000CDE27E /* MapKit.framework */; };
 		AADEBD4D1B71870500CDE27E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEBD4C1B71870500CDE27E /* MapViewController.swift */; };
+		AADEBD4F1B7195B000CDE27E /* GISUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEBD4E1B7195B000CDE27E /* GISUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		AADEBD401B71851400CDE27E /* PBRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBRTests.swift; sourceTree = "<group>"; };
 		AADEBD4A1B7186E000CDE27E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AADEBD4C1B71870500CDE27E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AADEBD4E1B7195B000CDE27E /* GISUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GISUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				AADEBD2A1B71851400CDE27E /* AppDelegate.swift */,
 				AADEBD2C1B71851400CDE27E /* ViewController.swift */,
+				AADEBD4E1B7195B000CDE27E /* GISUtils.swift */,
 				AADEBD4C1B71870500CDE27E /* MapViewController.swift */,
 				AADEBD311B71851400CDE27E /* Images.xcassets */,
 				AADEBD331B71851400CDE27E /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADEBD2D1B71851400CDE27E /* ViewController.swift in Sources */,
+				AADEBD4F1B7195B000CDE27E /* GISUtils.swift in Sources */,
 				AADEBD4D1B71870500CDE27E /* MapViewController.swift in Sources */,
 				AADEBD2B1B71851400CDE27E /* AppDelegate.swift in Sources */,
 			);

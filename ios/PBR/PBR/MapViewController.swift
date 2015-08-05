@@ -22,7 +22,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        centerViewOnLocation(mapView.userLocation)
+//        centerViewOnLocation(mapView.userLocation.location)
     }
     
     func centerViewOnLocation(location: CLLocation){
@@ -30,5 +30,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let mapRegion = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(mapRegion, animated: true)
+    }
+    
+    func displayRoute(origin: String, destination: String){
+        GISUtils.getCoordinate(origin)
+        GISUtils.getCoordinate(destination)
     }
 }

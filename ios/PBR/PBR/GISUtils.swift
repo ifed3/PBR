@@ -14,7 +14,7 @@ class GISUtils: NSObject {
     class func getPolyline(address1: String, address2: String){
         let originCoordinate = self.getCoordinate(address1)
         let destinationCoordinate = self.getCoordinate(address2)
-        let url = NSURL(string: "http://pelias.mapzen.com/search?input=" + address.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        let url = NSURL(string: "")
     }
     
     class func getCoordinate(address: String) -> CLLocationCoordinate2D {

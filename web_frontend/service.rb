@@ -25,7 +25,7 @@ def decode_polyline polyline
 	# why the frick do i need to divide by 10 lol
 	# decoded directions have lat/long off by factor of 10
 	# either mapzen's osrm is buggy or this polylines library is buggy
-	Polylines::Decoder.decode_polyline(route_geometry).map do |point|
+	Polylines::Decoder.decode_polyline(polyline).map do |point|
 		point.map do |val|
 			val / 10
 		end

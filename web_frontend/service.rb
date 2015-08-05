@@ -5,14 +5,7 @@ def get_waypoints address1, address2
 
 	route_geometry = get_route_geometry origin, destination
 
-	# why the frick do i need to divide by 10 lol
-	# decoded directions have lat/long off by factor of 10
-	# either mapzen's osrm is buggy or this polylines library is buggy
-	Polylines::Decoder.decode_polyline(route_geometry).map do |point|
-		point.map do |val|
-			val / 10
-		end
-	end
+	decode_polyline route_geometry
 end
 
 def get_coordinates address
@@ -26,4 +19,15 @@ end
 
 def get_url string
 	Net::HTTP.get(URI.parse(URI.encode(string)))
+end
+
+def decode_polyline polyline
+	# why the frick do i need to divide by 10 lol
+	# decoded directions have lat/long off by factor of 10
+	# either mapzen's osrm is buggy or this polylines library is buggy
+	Polylines::Decoder.decode_polyline(route_geometry).map do |point|
+		point.map do |val|
+			val / 10
+		end
+	end
 end

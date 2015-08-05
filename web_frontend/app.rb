@@ -19,5 +19,17 @@ class PbrApp < Sinatra::Base
   	erb :map
   end
 
+  get '/geocode' do
+    return get_coordinates params['address']
+  end
+
+  get '/geometry' do
+    return get_route_geometry params['origin'], params['destination']
+  end
+
+  get '/decode_polyline' do
+    return decode_polyline params['polyline']
+  end
+
 	run! if app_file == $0
 end

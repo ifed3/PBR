@@ -1,11 +1,5 @@
 def get_waypoints address1, address2
-
-	origin      = get_coordinates address1
-	destination = get_coordinates address2
-
-	route_geometry = get_route_geometry origin, destination
-
-	decode_polyline route_geometry
+	decode_polyline(get_route_geometry(get_coordinates(address1), get_coordinates(address2)))
 end
 
 def get_coordinates address

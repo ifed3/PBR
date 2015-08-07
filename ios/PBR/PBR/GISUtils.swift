@@ -15,9 +15,7 @@ class GISUtils: NSObject {
         let url = NSURL(string: "https://chihack-pbr.herokuapp.com/polyline_for?origin=" + address1.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)! + "&destination=" + address2.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
         let data = NSData(contentsOfURL: url!)
         var error: NSError?
-        let waypoints = (NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSArray) as! [Array<Double>]
-        var locations = waypoints.map { CLLocationCoordinate2D(latitude: $0.first!, longitude: $0.last!) }
-        let geodesic = MKGeodesicPolyline(coordinates: &locations[0], count: locations.count)
-        return geodesic
+        var waypoints = ((NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSArray) as! [Array<Double>]).map { CLLocationCoordinate2D(latitude: $0.first!, longitude: $0.last!) }
+        return MKGeodesicPolyline(coordinates: &waypoints[0], count: waypoints.count)
     }
 }

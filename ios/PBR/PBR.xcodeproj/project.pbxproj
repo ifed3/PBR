@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AADEBD2B1B71851400CDE27E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEBD2A1B71851400CDE27E /* AppDelegate.swift */; };
-		AADEBD2D1B71851400CDE27E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEBD2C1B71851400CDE27E /* ViewController.swift */; };
 		AADEBD321B71851400CDE27E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADEBD311B71851400CDE27E /* Images.xcassets */; };
 		AADEBD351B71851400CDE27E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADEBD331B71851400CDE27E /* LaunchScreen.xib */; };
 		AADEBD411B71851400CDE27E /* PBRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADEBD401B71851400CDE27E /* PBRTests.swift */; };
@@ -31,7 +30,6 @@
 		AADEBD251B71851400CDE27E /* PBR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADEBD291B71851400CDE27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AADEBD2A1B71851400CDE27E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AADEBD2C1B71851400CDE27E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AADEBD311B71851400CDE27E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AADEBD341B71851400CDE27E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AADEBD3A1B71851400CDE27E /* PBRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				AADEBD2A1B71851400CDE27E /* AppDelegate.swift */,
-				AADEBD2C1B71851400CDE27E /* ViewController.swift */,
 				AADEBD4E1B7195B000CDE27E /* GISUtils.swift */,
 				AADEBD4C1B71870500CDE27E /* MapViewController.swift */,
 				AADEBD311B71851400CDE27E /* Images.xcassets */,
@@ -218,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADEBD2D1B71851400CDE27E /* ViewController.swift in Sources */,
 				AADEBD4F1B7195B000CDE27E /* GISUtils.swift in Sources */,
 				AADEBD4D1B71870500CDE27E /* MapViewController.swift in Sources */,
 				AADEBD2B1B71851400CDE27E /* AppDelegate.swift in Sources */,
@@ -409,6 +405,7 @@
 				AADEBD461B71851400CDE27E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AADEBD471B71851400CDE27E /* Build configuration list for PBXNativeTarget "PBRTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +414,7 @@
 				AADEBD491B71851400CDE27E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,7 +20,7 @@ class PbrApp < Sinatra::Base
   end
 
   get '/polyline_for' do
-    decode_polyline(get_route_geometry(get_coordinates(params['origin']), get_coordinates(params['destination']))).inspect
+    get_waypoints(params['origin'], params['destination']).inspect
   end
 
 	run! if app_file == $0

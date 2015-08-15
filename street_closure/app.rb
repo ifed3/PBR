@@ -20,7 +20,7 @@ class ScrapeApp < Sinatra::Base
   scheduler.every interval do
     File.open(file_name, 'w') do |file|
       file.truncate 0
-      file.puts 
+      file.puts Time.new
     end
     scrape_street_closure_report file_name
   end

@@ -8,13 +8,14 @@ def geocode address
 	JSON.parse(Net::HTTP.get(URI.parse(URI.encode("http://pelias.mapzen.com/search?input=#{address}&bbox=#{chicago_bbox}"))))['features'].first['geometry']['coordinates']
 end
 
-def scrape_street_closure_report
+def scrape_street_closure_report outfile
 	agent = Mechanize.new
 	page = agent.get("https://webapps1.cityofchicago.org/StreetClosure/org/cityofchicago/streetclosure/cdot/getreport.do")
-	count = page.search("/html/body/div[@id='mainContent']/div[@id='content']/div[@id='container']/div[@class='header']/div[@id='content-container']/center[1]/div[@id='content-panel']/center[2]/table[@class='resultTable']//tr").count
+	last_row = page.search("/html/body/div[@id='mainContent']/div[@id='content']/div[@id='container']/div[@class='header']/div[@id='content-container']/center[1]/div[@id='content-panel']/center[2]/table[@class='resultTable']//tr").count
 	result_table = page.search("/html/body/div[@id='mainContent']/div[@id='content']/div[@id='container']/div[@class='header']/div[@id='content-container']/center[1]/div[@id='content-panel']/center[2]/table[@class='resultTable']")
+	first_row = 2
 
-	2.upto count do |row|
+	first_row.upto last_row do |row|
 
 		from_number   = result_table.at(".//tr[#{row}]/td[1]").text.chomp # 123
 		to_number     = result_table.at(".//tr[#{row}]/td[2]").text.chomp # 456
@@ -30,11 +31,11 @@ def scrape_street_closure_report
 		starting_coords = geocode from_address
 		ending_coords   = geocode to_address
 
-		# do useful stuff with results
-		# sometimes breaks before reaching the end for some reason (?)
-		p row
-		p starting_coords
-		p ending_coords
-		p
+		File.open(outfile, 'a+') do |file|
+			file.puts row
+			file.puts starting_coords
+		 	file.puts ending_coords
+		 	file.puts
+		end
 	end
 end

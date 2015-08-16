@@ -11,16 +11,20 @@ class ScrapeApp < Sinatra::Base
     'ping'    
   end
 
+  get '/closures' do
+    send_file 'closure_coordinates.txt'
+  end
+
   file_name = 'closure_coordinates.txt'
 
-  seconds_per_day = 86400
+  seconds_per_day = 24 * 60 * 60
   interval = "#{seconds_per_day}s"
 
   scheduler = Rufus::Scheduler.new
-  scheduler.every interval do
+  scheduler.every interval, :first_in => 0.1 do
     File.open(file_name, 'w') do |file|
       file.truncate 0
-      file.puts Time.new
+      file.puts "Last updated at: #{Time.now}"; file.puts
     end
     scrape_street_closure_report file_name
   end

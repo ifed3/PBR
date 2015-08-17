@@ -17,7 +17,7 @@ class ScrapeApp < Sinatra::Base
 
   seconds_per_day = 24 * 60 * 60
   seconds_in_four_minutes = 4 * 60
-  day = "#{day}s"
+  day = "#{seconds_per_day}s"
   four_minutes = "#{seconds_in_four_minutes}s"
 
   scheduler = Rufus::Scheduler.new

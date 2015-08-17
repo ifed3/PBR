@@ -16,15 +16,22 @@ class ScrapeApp < Sinatra::Base
   end
 
   seconds_per_day = 24 * 60 * 60
-  interval = "#{seconds_per_day}s"
+  seconds_in_four_minutes = 4 * 60
+  day = "#{day}s"
+  four_minutes = "#{seconds_in_four_minutes}s"
 
   scheduler = Rufus::Scheduler.new
-  scheduler.every interval, :first_in => 0.1 do
+  scheduler.every day, :first_in => 0.1 do
     File.open(output_file, 'w') do |file|
       file.truncate 0
-      file.puts "Last updated at: #{Time.now}"; file.puts
+      file.puts street_closure_report
     end
-    scrape_street_closure_report output_file
+  end
+
+  keep_alive = Rufus::Scheduler.new
+  keep_alive.every four_minutes, :first_in => 0.1 do
+    p Net::HTTP.get(URI.parse(URI.encode("https://streetscrape.herokuapp.com/")))
+    p Time.now.inspect
   end
 
 	run! if app_file == $0

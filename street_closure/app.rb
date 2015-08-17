@@ -9,9 +9,7 @@ class ScrapeApp < Sinatra::Base
 	
   output_file = 'closure_coordinates.txt'
 
-  get '/' do
-    'hi'    
-  end
+  get '/' do 'hi' end
 
   get '/closures' do
     send_file output_file

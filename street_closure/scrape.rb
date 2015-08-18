@@ -14,14 +14,14 @@ def street_closure_report
 	output[:closures] = (first_row..last_row).to_a.map do |row|
 
 		closure = {}
-		from_number            = result_table.at(".//tr[#{row}]/td[1]").text.chomp # 123
-		to_number              = result_table.at(".//tr[#{row}]/td[2]").text.chomp # 456
-		direction              = result_table.at(".//tr[#{row}]/td[3]").text.chomp # n
-		street_name            = result_table.at(".//tr[#{row}]/td[4]").text.chomp # dearborn
-		street_suffix          = result_table.at(".//tr[#{row}]/td[5]").text.chomp # st
-		closure[:startDate]    = result_table.at(".//tr[#{row}]/td[6]").text.chomp
-		closure[:endDate]      = result_table.at(".//tr[#{row}]/td[7]").text.chomp
-		closure[:closureType]  = result_table.at(".//tr[#{row}]/td[8]").text.chomp
+		from_number            = result_table.at(".//tr[#{row}]/td[1]").text.strip # 123
+		to_number              = result_table.at(".//tr[#{row}]/td[2]").text.strip # 456
+		direction              = result_table.at(".//tr[#{row}]/td[3]").text.strip # n
+		street_name            = result_table.at(".//tr[#{row}]/td[4]").text.strip # dearborn
+		street_suffix          = result_table.at(".//tr[#{row}]/td[5]").text.strip # st
+		closure[:startDate]    = result_table.at(".//tr[#{row}]/td[6]").text.strip
+		closure[:endDate]      = result_table.at(".//tr[#{row}]/td[7]").text.strip
+		closure[:closureType]  = result_table.at(".//tr[#{row}]/td[8]").text.strip
 		street                 = "#{direction} #{street_name} #{street_suffix}"
 		closure[:fromAddress]  = "#{from_number} #{street}"
 		closure[:toAddress]    = "#{to_number} #{street}"

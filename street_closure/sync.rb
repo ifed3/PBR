@@ -4,6 +4,7 @@ require 'pg'
 
 def sync(street_closure_report)
   conn = PG.connect(dbname: 'street_closures')
+  conn.exec('delete from street_closures')
   for row in street_closure_report['closures']
     line_geom = <<EOS
 st_makeline(
